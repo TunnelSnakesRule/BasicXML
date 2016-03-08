@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!ELEMENT Shecdule (time, day, course)> 
+<!ELEMENT schedule (weekdays)>
+<!ELEMENT weekdays (day+)>
 
-<!ELEMENT time (#PCDATA)>
+<!ELEMENT day (slot+)>
+<!ATTLIST day
+    which (mon|tue|wed|thu|fri) #REQUIRED
+  >
 
-<!ELEMENT day (#PCDATA)>
+<!ELEMENT slot (instructor,room)>
+<!ATTLIST slot
+    time (0830|0930|1030|1130|1230|1330|1430|1530|1630) #REQUIRED
+    class (ACIT4620|ACIT4650|ACIT4660|ACIT4770|ACIT4850|ACIT4910) #REQUIRED
+  >
 
-<!ELEMENT course (#PCDATA)>
+<!ELEMENT instructor (#PCDATA)>
+
+<!ELEMENT room (#PCDATA)>
