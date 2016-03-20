@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- a Shcedule has a week-->
+
+<!-- a week has days-->
+<!ELEMENT week (day+)>
+<!-- a day has slots-->
+<!ELEMENT day (slot+)>
+<!-- the diffrent days-->
+<!ATTLIST day
+    which (mon|tue|wed|thu|fri) #REQUIRED
+  >
+<!-- Slots have instructors and thier  class number-->
+<!ELEMENT weekslot (instructor,room)>
+<!-- diifrent possible times and courses -->
+<!ATTLIST weekslot
+    time (0830|0930|1030|1130|1230|1330|1430|1530|1630) #REQUIRED
+    class (ACIT4620|ACIT4650|ACIT4660|ACIT4770|ACIT4850|ACIT4910) #REQUIRED
+  >
+<!--enter in instructore-->
+<!ELEMENT instructor (#PCDATA)>
+<!--enter in room #-->
+<!ELEMENT room (#PCDATA)>
+
+
+
+
+
+<!ELEMENT time (timeslot+)>
+<!ATTLIST time
+    which (0830|0930|1030|1130|1230|1330|1430|1530|1630) #REQUIRED
+  >
+
+<!ELEMENT timeslot (instructor,room)>
+<!ATTLIST timeslot
+    day (Monday|Tuesday|Wednesday|Thursday|Friday) #REQUIRED
+    class (ACIT4620|ACIT4650|ACIT4660|ACIT4770|ACIT4850|ACIT4910) #REQUIRED
+  >
+
+
+
+
+<!ELEMENT class (classslot+)>
+<!ATTLIST class
+    which (ACIT4620|ACIT4650|ACIT4660|ACIT4770|ACIT4850|ACIT4910) #REQUIRED
+  >
+
+<!ELEMENT classslot (instructor,room)>
+<!ATTLIST classslot
+    day (Monday|Tuesday|Wednesday|Thursday|Friday) #REQUIRED
+    time (0830|0930|1030|1130|1230|1330|1430|1530|1630) #REQUIRED
+  >
+
