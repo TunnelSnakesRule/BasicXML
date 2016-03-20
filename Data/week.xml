@@ -9,50 +9,58 @@ and open the template in the editor.
 
 <week>
     <day which="mon">
-        <slot time="1030" class="ACIT4650">
+        <weekslot time="1030" class="ACIT4650">
             <instructor>Medhat Elmasry</instructor>
             <room>SE12-306</room>
-        </slot>
-        <slot time="1130" class="ACIT4650">
+        </weekslot>
+        <weekslot time="1130" class="ACIT4650">
             <instructor>Medhat Elmasry</instructor>
             <room>SE12-306</room>
-        </slot>
-        <slot time="1530" class="ACIT4650">
+        </weekslot>
+        <weekslot time="1530" class="ACIT4650">
             <instructor>Richard Chau</instructor>
             <room>SW9-206</room>
-        </slot>
-        <slot time="1630" class="ACIT4650">
+        </weekslot>
+        <weekslot time="1630" class="ACIT4650">
             <instructor>Medhat Elmasry</instructor>
             <room>SE6-205</room>
-        </slot>
+        </weekslot>
     </day>
     <day which="tue">
-        <slot time="0830" class="ACIT4620">
+        <weekslot time="0830" class="ACIT4620">
             <instructor>Bethany Edmonds</instructor>
             <room>SE12-306</room>
-        </slot>
-        <slot time="1230" class="ACIT4650">
+        </weekslot>
+        <weekslot time="0930" class="ACIT4620">
+            <instructor>Bethany Edmonds</instructor>
+            <room>SE12-306</room>
+        </weekslot>
+        <weekslot time="1230" class="ACIT4650">
             <instructor>Medhat Elmasry</instructor>
             <room>SW9-206</room>
-        </slot>
-        <slot time="1530" class="ACIT4620">
+        </weekslot>
+        <weekslot time="1430" class="ACIT4620">
             <instructor>Bethany Edmonds</instructor>
             <room>SW9-206</room>
-        </slot>
+        </weekslot>
+        <weekslot time="1530" class="ACIT4620">
+            <instructor>Bethany Edmonds</instructor>
+            <room>SW9-206</room>
+        </weekslot>
     </day>
      <day which="thu">
-        <slot time="0930" class="ACIT4910">
+        <weekslot time="0930" class="ACIT4910">
             <instructor>Richard Chau</instructor>
             <room>SW5-1840</room>
-        </slot>
-        <slot time="1030" class="ACIT4910">
+        </weekslot>
+        <weekslot time="1030" class="ACIT4910">
             <instructor>Richard Chau</instructor>
             <room>SE12-306</room>
-        </slot>
-        <slot time="1330" class="ACIT4850">
+        </weekslot>
+        <weekslot time="1330" class="ACIT4850">
             <instructor>James Parry</instructor>
             <room>SE12-308</room>
-        </slot>
+        </weekslot>
        
     </day>
 </week>
