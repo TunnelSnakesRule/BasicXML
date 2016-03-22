@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE class SYSTEM 'Hooah.dtd'>
+
+
+<class which="ACIT4910">
+    <classslot day="Monday" time="1530">
+           
+        <instructor>Richard Chau</instructor>
+        <room>SW9-206</room>
+    </classslot>
+    <classslot day="Thursday" time="0930">
+           
+        <instructor>Richard Chau</instructor>
+        <room>SW5-1840</room>
+    </classslot>
+    <classslot day="Thursday" time="1030">
+            
+        <instructor>Richard Chau</instructor>
+        <room>SE12-306</room>
+    </classslot>
+    <classslot day="Thursday" time="1130">
+   
+        <instructor>Richard Chau</instructor>
+        <room>SE12-306</room>
+    </classslot>
+</class>
+
