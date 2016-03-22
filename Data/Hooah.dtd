@@ -4,7 +4,7 @@
 <!-- a week has days-->
 <!ELEMENT week (day+)>
 <!-- a day has slots-->
-<!ELEMENT day (slot+)>
+<!ELEMENT day (weekslot+)>
 <!-- the diffrent days-->
 <!ATTLIST day
     which (mon|tue|wed|thu|fri) #REQUIRED
