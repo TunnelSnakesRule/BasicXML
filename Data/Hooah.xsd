@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+
+<!-- de common data types -->
+<!-- days -->
+<xs:simpleType name="day">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="Monday"/>
+        <xs:enumeration value="Tuesday"/>
+        <xs:enumeration value="Wednesday"/>
+        <xs:enumeration value="Thursday"/>
+        <xs:enumeration value="Friday"/>
+    </xs:restriction>
+</xs:simpleType>
+<!--time-->
+<xs:simpleType name="time">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[012][0-9][0-5][0-9]"/>
+    </xs:restriction>
+</xs:simpleType>
+    
+<!-- class -->
+<xs:simpleType name="class">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[A-Z]{4}[0-9]{4}"/>
+    </xs:restriction>
+</xs:simpleType>
+    
+<!-- room -->
+<xs:simpleType name="room">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[0-9A-Z]{3,4}-[0-9A-Z]{3,4}"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+                                    Week Structure
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+
+<!-- A week element -->
+<xs:complexType name="weekCMP">
+    <xs:sequence>
+        <xs:element name="dayATR" type="dayCMP" maxOccurs="5"/>
+    </xs:sequence>
+</xs:complexType>
+    
+<!-- A day element which has all the slots for that day. -->
+<xs:complexType name="dayCMP">
+    <xs:sequence>
+        <xs:element name="slot" type="slotCMP" maxOccurs="9"/>
+    </xs:sequence>
+    <xs:attribute name="which" type="day"/>
+</xs:complexType>
+    
+<!-- slot conatins de data -->
+<xs:complexType name="slotCMP">
+    <xs:sequence>
+        <xs:element name="instructor" type="xs:string"/>
+        <xs:element name="roomATR" type="room"/>
+    </xs:sequence>
+    <xs:attribute name="timeATR" type="time"/>
+    <xs:attribute name="classATR" type="class"/>
+</xs:complexType>
+
+
+<!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+                                    Time Structure 
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+
+<!--  -->
+    
+<!-- time exissits and has slotss  -->
+<xs:complexType name="timeCMP">
+    <xs:sequence>
+        <xs:element name="timeslot" type="timeslotCMP" maxOccurs="5"/>
+    </xs:sequence>
+    <xs:attribute name="which" type="time"/>
+</xs:complexType>
+    
+<!-- and in the slots we store datas -->
+<xs:complexType name="timeslotCMP">
+    <xs:sequence>
+        <xs:element name="instructor" type="xs:string"/>
+        <xs:element name="roomATR" type="room"/>
+    </xs:sequence>
+    <xs:attribute name="dayATR" type="day"/>
+    <xs:attribute name="courseATR" type="class"/>
+</xs:complexType>
+    
+<!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+                                    Class Structure 
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+    
+    <!--  Classes have slots  -->
+    <xs:complexType name="classCMP">
+        <xs:sequence>
+            <xs:element name="ClassATR" type="classslotCMP" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="which" type="class"/>
+    </xs:complexType>
+    
+    <!-- slots have most the data -->
+    <xs:complexType name="classslotCMP">
+        <xs:sequence>
+            <xs:element name="instructor" type="xs:string"/>
+            <xs:element name="roomATR" type="room"/>
+        </xs:sequence>
+        <xs:attribute name="dayATR" type="day"/>
+        <xs:attribute name="timeATR" type="time"/>
+    </xs:complexType>
+
+
+
+</xs:schema>
