@@ -99,4 +99,25 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-
 <!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                                     Class Structure 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+    
+    <!--  Classes have slots  -->
+    <xs:complexType name="classCMP">
+        <xs:sequence>
+            <xs:element name="ClassATR" type="classslotCMP" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="which" type="class"/>
+    </xs:complexType>
+    
+    <!-- slots have most the data -->
+    <xs:complexType name="classslotCMP">
+        <xs:sequence>
+            <xs:element name="instructor" type="xs:string"/>
+            <xs:element name="roomATR" type="room"/>
+        </xs:sequence>
+        <xs:attribute name="dayATR" type="day"/>
+        <xs:attribute name="timeATR" type="time"/>
+    </xs:complexType>
+
+
+
 </xs:schema>
