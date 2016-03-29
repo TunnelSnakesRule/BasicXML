@@ -42,29 +42,37 @@ and open the template in the editor.
     </xs:restriction>
 </xs:simpleType>
 
-<!-- Week -->
+<!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+                                    Week Structure
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
 
 <!-- A week element -->
-    <xs:complexType name="weekCMP">
-        <xs:sequence>
-            <xs:element name="week" type="weekCMP" maxOccurs="5"/>
-        </xs:sequence>
-    </xs:complexType>
+<xs:complexType name="weekCMP">
+    <xs:sequence>
+        <xs:element name="day" type="dayCMP" maxOccurs="5"/>
+    </xs:sequence>
+</xs:complexType>
     
-    <!-- A day element which has all the slots for that day. -->
-    <xs:complexType name="dayCMP">
-        <xs:sequence>
-            <xs:element name="slotCMP" type="slot" maxOccurs="9"/>
-        </xs:sequence>
-        <xs:attribute name="which" type="day"/>
-    </xs:complexType>
+<!-- A day element which has all the slots for that day. -->
+<xs:complexType name="dayCMP">
+    <xs:sequence>
+        <xs:element name="slot" type="slotCMP" maxOccurs="9"/>
+    </xs:sequence>
+    <xs:attribute name="which" type="day"/>
+</xs:complexType>
     
-    <!-- slot conatins de data -->
-    <xs:complexType name="slotCMP">
-        <xs:sequence>
-            <xs:element name="instructor" type="xs:string"/>
-            <xs:element name="roomATR" type="room"/>
-        </xs:sequence>
-        <xs:attribute name="timeATR" type="time"/>
-        <xs:attribute name="classATR" type="class"/>
-    </xs:complexType>
+<!-- slot conatins de data -->
+<xs:complexType name="slotCMP">
+    <xs:sequence>
+        <xs:element name="instructor" type="xs:string"/>
+        <xs:element name="roomATR" type="room"/>
+    </xs:sequence>
+    <xs:attribute name="timeATR" type="time"/>
+    <xs:attribute name="classATR" type="class"/>
+</xs:complexType>
+
+
+<!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+                                    Time Structure 
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+
