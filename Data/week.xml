@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <?xml-stylesheet type='text/xsl' href='timetablePeriods.xsl' ?>
 
-<!--$$$$$$$$$$ organized by week $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<!--
+Author   : Alex
+Organized by week 
+
+
+
+Revised by: Derrick Locquiao 
+revised : April 5, 2016, 3:04 PM
+
+-->
 <Sched
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="Hooah.xsd">
 <week>
+    
     <day which="mon">
         <weekslot time="1030" class="ACIT4650">
             <instructor>Medhat Elmasry</instructor>
@@ -46,6 +56,7 @@
             <room>SW9-206</room>
         </weekslot>
     </day>
+    
      <day which="thu">
         <weekslot time="0930" class="ACIT4910">
             <instructor>Richard Chau</instructor>
@@ -59,10 +70,11 @@
             <instructor>James Parry</instructor>
             <room>SE12-308</room>
         </weekslot>
-       
     </day>
 </week>
+
 <timeSched>
+        
 <time which="1030">
     <timeslot day="Monday" class="ACIT4850">
         <instructor>Medhat Elmasry</instructor>
