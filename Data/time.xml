@@ -1,18 +1,1 @@
 
-
-<time which="1030">
-    <timeslot day="Monday" class="ACIT4850">
-        <instructor>Medhat Elmasry</instructor>
-        <room>SE12-306</room>
-    </timeslot>
-    <timeslot day="Thursday" class="ACIT4910">
-            
-        <instructor>Richard Chau</instructor>
-        <room>SE12-306</room>
-    </timeslot>
-    <timeslot day="Friday" class="ACIT4770">
-            
-        <instructor>Trevor Lord</instructor>
-        <room>SE12-306</room>
-    </timeslot>
-</time>

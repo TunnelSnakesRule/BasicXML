@@ -1,4 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type='text/xsl' href='timetablePeriods.xsl' ?>
 
+<!--$$$$$$$$$$ organized by week $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<Sched
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="Hooah.xsd">
 <week>
     <day which="mon">
         <weekslot time="1030" class="ACIT4650">
@@ -56,3 +62,22 @@
        
     </day>
 </week>
+<timeSched>
+<time which="1030">
+    <timeslot day="Monday" class="ACIT4850">
+        <instructor>Medhat Elmasry</instructor>
+        <room>SE12-306</room>
+    </timeslot>
+    <timeslot day="Thursday" class="ACIT4910">
+            
+        <instructor>Richard Chau</instructor>
+        <room>SE12-306</room>
+    </timeslot>
+    <timeslot day="Friday" class="ACIT4770">
+            
+        <instructor>Trevor Lord</instructor>
+        <room>SE12-306</room>
+    </timeslot>
+</time>
+</timeSched>
+</Sched>
